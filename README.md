@@ -11,8 +11,9 @@ Your ability to develop a good algorithm will make the difference.
 
 ## Installation
 
-* [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+This [document](coderally.pdf) has a more detailed description that the steps below.
 
+* [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Eclipse Oxygen JEE](http://www.eclipse.org/downloads/packages/release/Oxygen/R). Expand the archive to a location where you have permission to modify files and execute eclipse
   * [Windows 64 bit](http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/R/eclipse-jee-oxygen-R-win32-x86_64.zip)
   * [Mac](http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/R/eclipse-jee-oxygen-R-macosx-cocoa-x86_64.dmg)
@@ -41,7 +42,6 @@ Your ability to develop a good algorithm will make the difference.
   * When imported, right-click on CodeRallyWeb -> Run As -> Run on Server and select your WebSphere Liberty Profile server.
   * Visit homepage on [http://localhost:9080/CodeRallyWeb](http://localhost:9080/CodeRallyWeb)
   
-This [document](coderally.pdf) has a more detailed description
     
 ## Your First Car
 
