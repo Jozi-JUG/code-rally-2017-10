@@ -133,4 +133,4 @@ public class Myfirstcar extends DefaultCarAIAgent {
 
 ## GameServer
 
-Visit [http://rally.cloudafrica.net/CodeRallyWeb/](http://rally.cloudafrica.net/CodeRallyWeb/)
+Visit [http://rally.cloudafrica.net:9080/CodeRallyWeb/](http://rally.cloudafrica.net:9080/CodeRallyWeb/)
