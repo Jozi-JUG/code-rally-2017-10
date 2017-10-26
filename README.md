@@ -50,6 +50,8 @@ This is the kind that the plugin will generate when you create your first agent 
 
 *Always start the WebSphere Liberty Server before creating a car or making any changes to your car. It seems once the plugin has failed to connect it doesn't try again.*  
 
+This is a very basic car. You can change the behaviour by remove call to `super` and performing alternative logic.
+
 ```java
 import com.ibm.coderally.agent.DefaultCarAIAgent;
 import com.ibm.coderally.api.agent.AIUtils;
@@ -58,16 +60,15 @@ import com.ibm.coderally.entity.obstacle.agent.Obstacle;
 import com.ibm.coderally.geo.agent.CheckPoint;
 import com.ibm.coderally.track.agent.Track;
 
-public class Myfirstcar extends DefaultCarAIAgent {
+public class VeryBasicCar extends DefaultCarAIAgent {
 
 	@Override
 	public void onCarCollision(Car other) {
-		// Provide custom logic or remove method for default implementation.		
+		super.onCarCollision(other);		
 	}
 
 	@Override
 	public void onCheckpointUpdated(CheckPoint oldCheckpoint) {
-		// Replace with custom logic or remove method for default implementation.
 		getCar().setBrakePercent(0);
 		getCar().setAccelerationPercent(100);
 		getCar().setTarget(AIUtils.getClosestLane(getCar().getCheckpoint(), getCar().getPosition()));
@@ -75,22 +76,22 @@ public class Myfirstcar extends DefaultCarAIAgent {
 
 	@Override
 	public void onObstacleInProximity(Obstacle obstacle) {
-		// Provide custom logic or remove method for default implementation.		
+		super.onObstacleInProximity(obstacle);		
 	}
 
 	@Override
 	public void onOnTrack() {
-		// Provide custom logic or remove method for default implementation.		
+        super.onOnTrack();		
 	}
 	
 	@Override
 	public void onOffTrack() {
-		// Provide custom logic or remove method for default implementation.		
+		super.onOffTrack();		
 	}
 
 	@Override
 	public void onOpponentInProximity(Car car) {
-		// Provide custom logic or remove method for default implementation.		
+		super.onOpponentInProximity(car);		
 	}
 
 	@Override
@@ -105,28 +106,24 @@ public class Myfirstcar extends DefaultCarAIAgent {
 	}
 
 	@Override
-	public void onTimeStep() {
-		
-		//  NOTE: Call getObstacles(...) or getCars(...) from any method for the latest position information
-		
-		// Replace with custom logic or remove method for default implementation.
+	public void onTimeStep() {		
 		
 		AIUtils.recalculateHeading(getCar());
 	}
 
 	@Override
 	public void init(Car car, Track track) {
-		// Provide custom logic or remove method for default implementation.		
+		super.init(car, track);		
 	}
 
 	@Override
 	public void onObstacleCollision(Obstacle obstacle) {
-		// Provide custom logic or remove method for default implementation.		
+		super.onObstacleCollision(obstacle);
 	}
 
 	@Override
 	public void onStalled() {
-		// Provide custom logic or remove method for default implementation.		
+        super.onStalled();		
 	}
 }
 ```
